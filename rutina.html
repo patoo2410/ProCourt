@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProCourt Rutina</title>
+</head>
+<body>
+    <header>
+        <a href="./index.html"><img src="./ProCourtLogo.svg" alt="Logo de ProCourt"></a>
+        <nav aria-label="Navegacion Principal">
+            <a href="./index.html">Haz clic para volver a configurar tu perfil</a>
+        </nav>
+    </header>
+    <main>
+        <h1 class="titulo">¡Rutina generada!</h1>
+        <section id="evaluacion-fisica">
+            <h2>Evaluación física</h2>
+            <section id="perfil-jugador">
+                <h3>Perfil del Jugador</h3>
+                <p class="texts">Jugador <span id="jugador"></span></p>
+                <p class="texts">Posición <span id="posicion"></span></p>
+                <p class="texts">Estilo <span id="estilo"></span></p>
+            </section>
+            <section id="datos-fisicos">
+                <h3>Datos Físicos</h3>
+                <p><abbr title="Índice de Masa Corporal">IMC</abbr> <span id="imc"></span></p>
+                <p>Peso <span id="peso"></span></p>
+                <p>Estatura <span id="estatura"></span></p>
+                <meter id="barra-imc" min="0" max="40" value="0" aria-label="Medidor de Índice de Masa Corporal"></meter>
+                <p id="rango-ideal"></p>
+            </section>
+        </section>
+        <section id="rutinas">
+            <h2>Rutinas</h2>
+            <section id="plan-semanal" aria-label="Plan de entrenamiento semanal">
+            </section>
+        </section>
+    </main>
+</body>
+</html>
