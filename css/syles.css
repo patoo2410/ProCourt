@@ -1,0 +1,278 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background: #0D0D0D;
+    font-family: system-ui, sans-serif;
+    color: white;
+    margin: 0 auto;
+}
+header{
+    height: 100px;
+    border-bottom: 1px solid rgb(50, 50, 50);
+    width: 100%;
+    padding: 8px;
+    background: #0D0D0D;
+}
+header > a{
+    display: flex;
+    align-items: center;
+}
+header > a > img{
+    height: 80px;
+}
+.orange{
+    color: #FF5E14;
+}
+.titulo{
+    display: flex;
+    justify-content: center;
+    font-size: 0.65rem;
+    margin-top: 60px;
+    font-weight: bolder;
+}
+h1{
+    font-family: "Anton", sans-serif;
+    font-size: 5rem;
+    text-align: center;
+    margin: 10px auto;
+    width: 30%;
+    line-height: 100px;
+    margin-bottom: 50px;
+}
+h2, h3{
+    font-family: "Teko", sans-serif;
+}
+.caracteristicas, .crear-perfil{
+    max-width:900px;
+    width:40%;
+    min-width: 700px;
+    background: #1A1A1A;
+    padding: 20px;
+    margin: 15px auto;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    color: #888888;
+}
+.caracteristicas:not(h2){
+    word-spacing: 2px;
+    font-weight: 600;
+}
+.caracteristicas > h2{
+    font-size: 1.2rem;
+}
+.caracteristicas > ul{
+    list-style: none;
+}
+.caracteristicas > ul > li{
+    margin-bottom: 10px;
+}
+.caracteristicas > ul > li::before{
+    content: "► ";
+    color: #FF5E14;
+    font-size: 0.8rem;
+}
+.frase-motivadora{
+    font-family: "Anton", sans-serif;
+    font-size: 2rem;
+    text-align: center;
+    margin: 30px auto;
+    width: 100%;
+    line-height: 100px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    letter-spacing: 0.3px;
+}
+.crear-perfil > h3{
+    color: white;
+    font-size: 1.8rem;
+}
+.legend{
+    font-size: 0.7rem;
+}
+hr{
+    border: 0.5px solid rgba(255, 255, 255, 0.08);
+    border-bottom: none;
+}
+fieldset{
+    border: none;
+    padding: 0;
+}
+.label-datos{
+    font-weight: 600;
+    display: flex;
+    flex-flow: column;
+    font-size: 0.9rem;
+}
+.input-datos{
+    border: 1px solid rgba(255, 255, 255, 0.08)
+}
+.input-datos:focus{
+    outline: none;
+    border: 2px solid #C23C00;
+    box-shadow: 0 0 8px rgba(194, 60, 0, 0.35);
+}
+#datos-fisicos label input{
+    background: #2A2A2A;
+    height: 50px;
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;; 
+    margin: 10px 0;
+}
+.juntar{
+    display: flex;
+    gap: 20px;
+}
+.juntar .label-datos{
+    flex: 1;
+}
+.posicion-input{
+    display: flex;
+    flex-flow: column wrap;
+    width: 130px;
+    height: 65px;
+    background: #2A2A2A;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 15px;
+    transition:
+        color .3s,
+        border-color .2s,
+        box-shadow .2s,
+        background-color .2s;
+}
+.iniciales{
+    font-family: "Anton", sans-serif;
+    letter-spacing: 0.5px;
+    font-size: 1.2rem;
+}
+.posicion{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+.nombre_posicion{
+    font-family: Arial;
+    font-size: 0.6rem;
+}
+.posicion-input input, .estilo-input input{
+    appearance: none;
+}
+.posicion-input:hover{
+    cursor: pointer;
+    color: white;
+    border: 2px solid #C23C00;
+    box-shadow: 0 0 8px rgba(194, 60, 0, 0.35);
+}
+.posicion-input:has(input:checked){
+    color: #FF5E14;
+    border: 2px solid #FF5E14;
+    background: rgba(194, 60, 0, 0.1);
+}
+.estilo-juego{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    flex: 0 0 0;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+.estilo-input{
+    display: flex;
+    flex-flow: column wrap;
+    width: 330px;
+    height: 65px;
+    background: #2A2A2A;
+    justify-content: center;
+    align-items: left;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 15px;
+    transition: border 0.1s;
+    padding: 12px;
+    flex:1 1 320px;
+}
+.estilo{
+    font-family: sans-serif;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    font-size: 0.8rem;
+    color: white;
+}
+.descripcion_estilo{
+    margin-top: 7px;
+    font-family: Arial;
+    font-size: 0.8rem;
+}
+.estilo-input:hover{
+    cursor: pointer;
+    border: 2px solid #C23C00;
+    box-shadow: 0 0 8px rgba(194, 60, 0, 0.35);
+}
+.estilo-input::after{
+    align-self: flex-end;
+    content:"";
+    width: 15px;
+    height: 15px;
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+    background: #2A2A2A;
+    transition: background 0.3s, border 0.3s ;
+}
+.estilo-input:has(input:checked)::after{
+    content:"";
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    background: #fff;
+    border: 5px solid #FF5E14;
+}
+footer{
+    display: flex;
+    margin-top: 100px;
+    height: 80px;
+    border-top: 1px solid rgb(50, 50, 50);
+    width: 100%;
+    padding: 15px;
+    background: #0D0D0D;
+    justify-content: center;
+    align-items: center;
+    font-family: "Anton", sans-serif;
+}
+.submit-btn{
+    width: 100%;
+    height: 50px;
+    margin: 20px auto;
+    border-radius: 15px;
+    background: #FF5E14;
+    color: white;
+    letter-spacing: 1px;
+    font-size: 1rem;
+    font-family: "Anton", sans-serif;
+    border: none;
+    box-shadow: 0 0 8px rgba(194, 60, 0, 0.35);
+    transition: box-shadow 0.3s, transform 0.3s;
+}
+.submit-btn:hover{
+    cursor: pointer;
+    box-shadow: 0 0 50px rgba(194, 60, 0, 0.35);
+    transform: translateY(-2px);
+}
+.submit-btn:active{
+    box-shadow: 0 0 100px rgba(194, 60, 0, 0.35);
+    background: #C23C00;
+    transform: translateY(1px) scale(.98);
+}
+.submit-btn:disabled{
+    opacity:.5;
+    cursor:not-allowed;
+    box-shadow:none;
+}
+.submit-btn:focus-visible{
+    outline:2px solid #FF5E14;
+    outline-offset:2px;
+}

@@ -1,77 +1,267 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="ProCourt genera rutinas personalizadas para jugadores de baloncesto según su posición, estilo de juego y características físicas.">
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="ProCourt genera rutinas personalizadas para jugadores de baloncesto según su posición, estilo de juego y características físicas."
+    />
+    <link rel="stylesheet" href="./css/syles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@400;500;700&family=Teko:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
     <title>ProCourt</title>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <a href="./index.html"><img src="./assets/Logo/ProCourtLogo.svg" alt="Logo de ProCourt"></a>
-        <h1 class="titulo">¡Bienvenido a ProCourt!</h1>
+      <a href="index.html"
+        ><img
+          src="/assets/Logo/ProCourtLogo.png"
+          alt="Logo oficial de ProCourt"
+      /></a>
     </header>
     <main>
-        <section id="introduccion">
-            <h2>¿Qué es ProCourt?</h2>
-            <p class="texts">En ProCourt sabemos que no todos los jugadores tienen acceso a un entrenador personal, lo cual limita a muchos atletas a entrenar de manera genérica sin poder mejorar en los aspectos que realmente necesitan desarrollar según su perfil.</p>
-            <h2>¿Cómo te ayudamos?</h2>
-            <p class="texts">Con ProCourt podrás indicarnos tu posición, tu estilo de juego y tus características físicas para recibir una rutina personalizada adaptada a tus necesidades. Nuestro objetivo es ayudarte a potenciar tus fortalezas y trabajar las áreas que más impacto tienen en tu rendimiento dentro de la cancha.</p>
-            <h2>¿Qué incluye tu entrenamiento?</h2>
-            <ul class="lista-beneficios">
-                <li>Rutinas de cancha adaptadas a tu posición y estilo de juego.</li>
-                <li>Rutinas de gimnasio enfocadas en tu perfil físico.</li>
-                <li>Ejercicios de pliometría para mejorar explosividad y salto vertical.</li>
-                <li>Estiramientos para ayudar a prevenir lesiones y mejorar la movilidad.</li>
-            </ul>
-            <p id="frase-motivadora"><strong>Nuestra meta es que siempre seas mejor que ayer.</strong></p>
-        </section>
-        <section>
-            <h2>Crea tu perfil de jugador</h2>
-            <form class="formularios" id="formulario-jugador" action="./rutina.html">
-                <fieldset id="formulario-fisico">
-                    <legend>Datos Físicos</legend>
-                    <label class="texts" for="nombre-usuario">Nombre <span aria-hidden="true">: </span></label>
-                    <input id="nombre-usuario" name="nombre-usuario" type="text" placeholder="Ej. Anthony Edwards" size="25" required>
-                    <label class="texts" for="peso-usuario">Peso (kg) <span aria-hidden="true">: </span></label>
-                    <input id="peso-usuario" name="peso-usuario" type="number" min="15" max="200" required>
-                    <label class="texts" for="estatura-usuario">Estatura (cm) <span aria-hidden="true">: </span></label>
-                    <input id="estatura-usuario" name="estatura-usuario" type="number" min="100" max="250" required>
-                </fieldset>
-                <fieldset>
-                    <legend>Perfil Deportivo</legend>
-                    <label class="texts" for="posicion-usuario" id="label-posicion">Posición <span aria-hidden="true">: </span></label>
-                    <select aria-labelledby="label-posicion" id="posicion-usuario" name="posicion-usuario" required>
-                        <option value="" selected disabled>Seleccione una opción</option>
-                        <option value="base">Base</option>
-                        <option value="escolta">Escolta</option>
-                        <option value="alero">Alero</option>
-                        <option value="ala-pivot">Ala-Pívot</option>
-                        <option value="pivot">Pívot</option>
-                    </select>
-                    <fieldset>
-                        <legend>Estilo de Juego:</legend>
-                        <input id="estilo-anotador" name="estilo" value="anotador" type="radio" required>
-                        <label class="texts" for="estilo-anotador">Anotador</label>
-                        <input id="estilo-defensor" name="estilo" value="defensor" type="radio">
-                        <label class="texts" for="estilo-defensor">Defensor</label>
-                        <input id="estilo-playmaker" name="estilo" value="playmaker" type="radio">
-                        <label class="texts" for="estilo-playmaker">Playmaker</label>
-                        <input id="estilo-atletico" name="estilo" value="atletico" type="radio">
-                        <label class="texts" for="estilo-atletico">Atlético</label>
-                        <input id="estilo-versatil" name="estilo" value="versatil" type="radio">
-                        <label class="texts" for="estilo-versatil">Versátil</label>
-                        <input id="estilo-tirador" name="estilo" value="tirador" type="radio">
-                        <label class="texts" for="estilo-tirador">Tirador</label>
-                        <input id="estilo-poste" name="estilo" value="poste" type="radio">
-                        <label class="texts" for="estilo-poste">Poste</label>
-                        <input id="estilo-3d" name="estilo" value="3d" type="radio">
-                        <label class="texts" for="estilo-3d">Tres puntos y defensa</label>
-                    </fieldset>
-                </fieldset>
-                <button type="submit">Generar rutina</button>
-            </form>
-        </section>
+      <span class="orange titulo">ENTRENAMIENTO PERSONALIZADO</span>
+      <h1>¡BIENVENIDO A <span class="orange">PROCOURT!</span></h1>
+      <article class="caracteristicas">
+        <h2 class="orange">¿QUÉ ES PROCOURT?</h2>
+        <p>
+          En ProCourt sabemos que no todos los jugadores tienen acceso a un
+          entrenador personal, lo cual limita a muchos atletas a entrenar de
+          manera genérica sin poder mejorar en los aspectos que realmente
+          necesitan desarrollar según su perfil.
+        </p>
+      </article>
+      <article class="caracteristicas">
+        <h2 class="orange">¿CÓMO TE AYUDAMOS?</h2>
+        <p>
+          Con ProCourt podrás indicarnos tu posición, tu estilo de juego y tus
+          características físicas para recibir una rutina personalizada adaptada
+          a tus necesidades. Nuestro objetivo es ayudarte a potenciar tus
+          fortalezas y trabajar las áreas que más impacto tienen en tu
+          rendimiento dentro de la cancha.
+        </p>
+      </article>
+      <article class="caracteristicas">
+        <h2 class="orange">¿QUÉ INCLUYE TU ENTRENAMIENTO?</h2>
+        <ul class="lista-ventajas">
+          <li>Rutinas de cancha adaptadas a tu posición y estilo de juego.</li>
+          <li>Rutinas de gimnasio enfocadas en tu perfil físico.</li>
+          <li>
+            Ejercicios de pliometría para mejorar explosividad y salto vertical.
+          </li>
+          <li>
+            Estiramientos para ayudar a prevenir lesiones y mejorar la
+            movilidad.
+          </li>
+        </ul>
+      </article>
+      <p class="frase-motivadora">
+        "Nuestra meta es que siempre seas
+        <span class="orange">mejor que ayer.</span>"
+      </p>
+      <form class="crear-perfil">
+        <h3>CREA TU <span class="orange">PERFIL DE JUGADOR</span></h3>
+        <p class="legend">DATOS FÍSICOS</p>
+        <hr />
+        <fieldset id="datos-fisicos">
+          <label class="label-datos"
+            ><span>NOMBRE</span>
+            <input
+              type="text"
+              placeholder="Ej. Anthony Edwards"
+              id="nombre_jugador"
+              name="nombre_jugador"
+              class="input-datos"
+              required
+          /></label>
+          <div class="juntar">
+            <label class="label-datos"
+              ><span>PESO (KG)</span>
+              <input
+                type="number"
+                placeholder="75"
+                id="peso_jugador"
+                name="peso_jugador"
+                min="30"
+                max="200"
+                class="input-datos"
+                required
+            /></label>
+            <label class="label-datos"
+              ><span>ESTATURA (CM)</span>
+              <input
+                type="number"
+                placeholder="185"
+                id="estatura_jugador"
+                name="estatura_jugador"
+                min="130"
+                max="250"
+                class="input-datos"
+                required
+            /></label>
+          </div>
+        </fieldset>
+        <p class="legend">PERFIL DEPORTIVO</p>
+        <hr />
+        <fieldset id="perfil-deportivo">
+          <legend class="label-datos">POSICIÓN EN LA CANCHA</legend>
+          <div class="posicion">
+            <label class="posicion-input">
+              <span class="iniciales">PG</span>
+              <span class="nombre_posicion">Base</span>
+              <input
+                type="radio"
+                name="posicion-cancha"
+                id="base"
+                value="base"
+                required
+              />
+            </label>
+            <label class="posicion-input">
+              <span class="iniciales">SG</span>
+              <span class="nombre_posicion">Escolta</span>
+              <input
+                type="radio"
+                name="posicion-cancha"
+                id="escolta"
+                value="escolta"
+              />
+            </label>
+            <label class="posicion-input">
+              <span class="iniciales">SF</span>
+              <span class="nombre_posicion">Alero</span>
+              <input
+                type="radio"
+                name="posicion-cancha"
+                id="alero"
+                value="alero"
+              />
+            </label>
+            <label class="posicion-input">
+              <span class="iniciales">PF</span>
+              <span class="nombre_posicion">Ala-Pívot</span>
+              <input
+                type="radio"
+                name="posicion-cancha"
+                id="ala-pivot"
+                value="ala-pivot"
+              />
+            </label>
+            <label class="posicion-input">
+              <span class="iniciales">C</span>
+              <span class="nombre_posicion">Pívot</span>
+              <input
+                type="radio"
+                name="posicion-cancha"
+                id="pivot"
+                value="pivot"
+              />
+            </label>
+          </div>
+
+          <p class="label-datos">ESTILO DE JUEGO</p>
+          <div class="estilo-juego">
+            <label class="estilo-input">
+              <span class="estilo">Anotador</span>
+              <span class="descripcion_estilo">Máxima producción ofensiva</span>
+              <input
+                type="radio"
+                name="estilo-jugador"
+                id="anotador"
+                value="anotador"
+                required
+              />
+            </label>
+            <label class="estilo-input">
+              <span class="estilo">Defensor</span>
+              <span class="descripcion_estilo"
+                >Elite en defensa individual</span
+              >
+              <input
+                type="radio"
+                name="estilo-jugador"
+                id="defensor"
+                value="defensor"
+              />
+            </label>
+            <label class="estilo-input">
+              <span class="estilo">Playmaker</span>
+              <span class="descripcion_estilo">Visión y control del juego</span>
+              <input
+                type="radio"
+                name="estilo-jugador"
+                id="playmaker"
+                value="playmaker"
+              />
+            </label>
+            <label class="estilo-input">
+              <span class="estilo">Atlético</span>
+              <span class="descripcion_estilo">Velocidad y explosividad</span>
+              <input
+                type="radio"
+                name="estilo-jugador"
+                id="atletico"
+                value="atletico"
+              />
+            </label>
+            <label class="estilo-input">
+              <span class="estilo">Versátil</span>
+              <span class="descripcion_estilo"
+                >Completo en todas las facetas</span
+              >
+              <input
+                type="radio"
+                name="estilo-jugador"
+                id="versatil"
+                value="versatil"
+              />
+            </label>
+            <label class="estilo-input">
+              <span class="estilo">Tirador</span>
+              <span class="descripcion_estilo"
+                >Especialista en tiro exterior</span
+              >
+              <input
+                type="radio"
+                name="estilo-jugador"
+                id="tirador"
+                value="tirador"
+              />
+            </label>
+            <label class="estilo-input">
+              <span class="estilo">Poste</span>
+              <span class="descripcion_estilo">Dominio del juego interior</span>
+              <input
+                type="radio"
+                name="estilo-jugador"
+                id="poste"
+                value="poste"
+              />
+            </label>
+            <label class="estilo-input">
+              <span class="estilo">Tres puntos y defensa</span>
+              <span class="descripcion_estilo"
+                >Espaciado y marcaje exterior</span
+              >
+              <input
+                type="radio"
+                name="estilo-jugador"
+                id="tripleydef"
+                value="tripleydef"
+              />
+            </label>
+          </div>
+        </fieldset>
+        <button class="submit-btn" type="submit">GENERAR RUTINA  ></button>
+      </form>
     </main>
-</body>
+    <footer>
+      <span id="copy">Powered by &copy;ProCourt</span>
+    </footer>
+  </body>
 </html>
