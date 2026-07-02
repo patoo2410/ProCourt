@@ -105,8 +105,7 @@ fieldset{
     font-size: 0.9rem;
 }
 .input-datos{
-    border: 1px solid rgba(255, 255, 255, 0.08)
-    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.08);
 }
 .input-datos:focus{
     outline: none;
@@ -120,6 +119,7 @@ fieldset{
     padding: 10px;
     border-radius: 10px;; 
     margin: 10px 0;
+    color: white;
 }
 .juntar{
     display: flex;
@@ -131,7 +131,8 @@ fieldset{
 .posicion-input{
     display: flex;
     flex-flow: column wrap;
-    width: 130px;
+    width: 40%;
+    min-width: 40px;
     height: 65px;
     background: #2A2A2A;
     justify-content: center;
@@ -186,7 +187,8 @@ fieldset{
 .estilo-input{
     display: flex;
     flex-flow: column wrap;
-    width: 330px;
+    width: 40%;
+    min-width: 330px;
     height: 65px;
     background: #2A2A2A;
     justify-content: center;
