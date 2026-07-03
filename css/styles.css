@@ -137,6 +137,9 @@ fieldset{
 .juntar .label-datos{
     flex: 1;
 }
+.posicion-input, .estilo-input{
+    position: relative;
+}
 .posicion-input{
     display: flex;
     flex-flow: column wrap;
@@ -177,6 +180,11 @@ fieldset{
     width: 100%;
 }
 .posicion-input input, .estilo-input input{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -186,6 +194,7 @@ fieldset{
     box-shadow: none;
     margin: 0;
     padding: 0;
+    cursor: pointer;
 }
 @media (hover: hover) and (pointer: fine){
     .posicion-input:hover{
