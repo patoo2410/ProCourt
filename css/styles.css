@@ -20,8 +20,8 @@ header > a{
     align-items: center;
 }
 header > a > img{
-    margin-top: 0.6rem;
-    height: 60px;
+    margin-top: 0.8rem;
+    height: 56px;
 }
 .orange{
     color: #FF5E14;
@@ -169,6 +169,13 @@ fieldset{
 .posicion-input input, .estilo-input input{
     appearance: none;
     -webkit-appearance: none;
+    -moz-appearance: none;
+    border: none;
+    outline: none;
+    background: transparent;
+    box-shadow: none;
+    margin: 0;
+    padding: 0;
 }
 .posicion-input:hover{
     cursor: pointer;
@@ -317,17 +324,17 @@ footer{
 }
 
 @media (max-width: 480px) {
+    header{
+        height: 64px;
+    }
+    header > a > img{
+        margin-top: 0.5rem;
+        height: 40px;
+    }
     h1 {
         font-size: 2.2rem;
     }
     .estilo-input {
         min-width: 100%;
-    }
-    header{
-        height: 64px;
-    }
-    header > a > img{
-        height: 40px;
-        margin-top: 0.4rem;
     }
 }
