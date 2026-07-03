@@ -1,5 +1,6 @@
 *{
     box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
 }
 body{
     background: #0D0D0D;
@@ -46,6 +47,9 @@ h1{
 }
 h2, h3{
     font-family: "Teko", sans-serif;
+}
+h3{
+    font-size: 1rem;
 }
 .caracteristicas, .crear-perfil{
     max-width:900px;
@@ -154,6 +158,8 @@ fieldset{
     font-family: "Anton", sans-serif;
     letter-spacing: 0.5px;
     font-size: 1.2rem;
+    text-align: center;
+    width: 100%;
 }
 .posicion{
     margin-top: 10px;
@@ -165,6 +171,8 @@ fieldset{
 .nombre_posicion{
     font-family: Arial;
     font-size: 0.6rem;
+    text-align: center;
+    width: 100%;
 }
 .posicion-input input, .estilo-input input{
     appearance: none;
@@ -177,11 +185,13 @@ fieldset{
     margin: 0;
     padding: 0;
 }
-.posicion-input:hover{
-    cursor: pointer;
-    color: white;
-    border: 2px solid #C23C00;
-    box-shadow: 0 0 8px rgba(194, 60, 0, 0.35);
+@media (hover: hover) and (pointer: fine){
+    .posicion-input:hover{
+        cursor: pointer;
+        color: white;
+        border: 2px solid #C23C00;
+        box-shadow: 0 0 8px rgba(194, 60, 0, 0.35);
+    }
 }
 .posicion-input:has(input:checked){
     color: #FF5E14;
@@ -223,10 +233,12 @@ fieldset{
     font-family: Arial;
     font-size: 0.8rem;
 }
-.estilo-input:hover{
-    cursor: pointer;
-    border: 2px solid #C23C00;
-    box-shadow: 0 0 8px rgba(194, 60, 0, 0.35);
+@media (hover: hover) and (pointer: fine){
+    .estilo-input:hover{
+        cursor: pointer;
+        border: 2px solid #C23C00;
+        box-shadow: 0 0 8px rgba(194, 60, 0, 0.35);
+    }
 }
 .estilo-input::after{
     align-self: flex-end;
@@ -321,7 +333,7 @@ footer{
         gap: 10px;
     }
 }
-
+ 
 @media (max-width: 480px) {
     header{
         height: 64px;
@@ -336,4 +348,8 @@ footer{
     .estilo-input {
         min-width: 100%;
     }
+    .crear-perfil > h3{
+        font-size: 1.6rem;
+    }
 }
+ 
