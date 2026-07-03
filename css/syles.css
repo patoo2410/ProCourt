@@ -10,7 +10,7 @@ body{
 header{
     height: 100px;
     border-bottom: 1px solid rgb(50, 50, 50);
-    width: 100%;
+    min-width: 100vw;
     padding: 8px;
     background: #0D0D0D;
 }
@@ -30,6 +30,7 @@ header > a > img{
     font-size: 0.65rem;
     margin-top: 60px;
     font-weight: bolder;
+    min-width: 300px;
 }
 h1{
     font-family: "Anton", sans-serif;
@@ -37,6 +38,7 @@ h1{
     text-align: center;
     margin: 10px auto;
     width: 30%;
+    min-width: 500px;
     line-height: 100px;
     margin-bottom: 50px;
 }
@@ -82,6 +84,7 @@ h2, h3{
     margin-bottom: 20px;
     font-weight: bold;
     letter-spacing: 0.3px;
+    min-width: 750px;
 }
 .crear-perfil > h3{
     color: white;
@@ -105,7 +108,7 @@ fieldset{
     font-size: 0.9rem;
 }
 .input-datos{
-    border: 1px solid rgba(255, 255, 255, 0.08)
+    border: 1px solid rgba(255, 255, 255, 0.08);
 }
 .input-datos:focus{
     outline: none;
@@ -119,6 +122,7 @@ fieldset{
     padding: 10px;
     border-radius: 10px;; 
     margin: 10px 0;
+    color: white;
 }
 .juntar{
     display: flex;
@@ -130,7 +134,8 @@ fieldset{
 .posicion-input{
     display: flex;
     flex-flow: column wrap;
-    width: 130px;
+    width: 40%;
+    min-width: 40px;
     height: 65px;
     background: #2A2A2A;
     justify-content: center;
@@ -161,6 +166,7 @@ fieldset{
 }
 .posicion-input input, .estilo-input input{
     appearance: none;
+    -webkit-appearance: none;
 }
 .posicion-input:hover{
     cursor: pointer;
@@ -185,7 +191,8 @@ fieldset{
 .estilo-input{
     display: flex;
     flex-flow: column wrap;
-    width: 330px;
+    width: 40%;
+    min-width: 330px;
     height: 65px;
     background: #2A2A2A;
     justify-content: center;
@@ -236,7 +243,7 @@ footer{
     margin-top: 100px;
     height: 80px;
     border-top: 1px solid rgb(50, 50, 50);
-    width: 100%;
+    min-width: 100vw;
     padding: 15px;
     background: #0D0D0D;
     justify-content: center;
