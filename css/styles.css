@@ -6,11 +6,12 @@ body{
     font-family: system-ui, sans-serif;
     color: white;
     margin: 0 auto;
+    overflow-x: hidden;
 }
 header{
     height: 100px;
     border-bottom: 1px solid rgb(50, 50, 50);
-    min-width: 100vw;
+    min-width: 100%;
     padding: 8px;
     background: #0D0D0D;
 }
@@ -19,7 +20,8 @@ header > a{
     align-items: center;
 }
 header > a > img{
-    height: 80px;
+    margin-top: 0.6rem;
+    height: 60px;
 }
 .orange{
     color: #FF5E14;
@@ -37,9 +39,9 @@ h1{
     font-size: 5rem;
     text-align: center;
     margin: 10px auto;
-    width: 30%;
+    width: 100%;
     min-width: 500px;
-    line-height: 100px;
+    line-height: 1.2;
     margin-bottom: 50px;
 }
 h2, h3{
@@ -191,8 +193,8 @@ fieldset{
 .estilo-input{
     display: flex;
     flex-flow: column wrap;
-    width: 40%;
-    min-width: 300px;
+    width: 49%;
+    max-width: 49%;
     height: 65px;
     background: #2A2A2A;
     justify-content: center;
@@ -251,7 +253,7 @@ footer{
     margin-top: 100px;
     height: 80px;
     border-top: 1px solid rgb(50, 50, 50);
-    min-width: 100vw;
+    min-width: 100%;
     padding: 15px;
     background: #0D0D0D;
     justify-content: center;
@@ -291,12 +293,41 @@ footer{
     outline:2px solid #FF5E14;
     outline-offset:2px;
 }
-@media (max-width: 600){
-    header{
-        min-width: 600px;
-        border-bottom: 1px solid rgb(50, 50, 50);
+@media (max-width: 768px) {
+    h1 {
+        width: 90%;
+        min-width: unset;
+        font-size: 3rem;
+        line-height: 1.1;
     }
-    header > img{
-        width: 10%;
+    .caracteristicas, .crear-perfil {
+        width: 90%;
+        min-width: unset;
+    }
+    .frase-motivadora {
+        width: 90%;
+        min-width: unset;
+        font-size: 1.5rem;
+        line-height: 1.4;
+    }
+    .juntar {
+        flex-direction: row;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2.2rem;
+    }
+    .estilo-input {
+        min-width: 100%;
+    }
+    header{
+        height: 64px;
+    }
+    header > a > img{
+        height: 40px;
+        margin-top: 0.4rem;
     }
 }
