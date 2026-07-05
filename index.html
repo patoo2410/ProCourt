@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -22,18 +22,21 @@
         ><img
           src="./assets/Logo/ProCourtLogo.png"
           alt="Logo oficial de ProCourt"
+          id="logo"
       /></a>
     </header>
     <main>
-      <span class="orange titulo">ENTRENAMIENTO PERSONALIZADO</span>
-      <h1>¡BIENVENIDO A <span class="orange">PROCOURT!</span></h1>
+      <div class="hero">
+        <span class="orange titulo">ENTRENAMIENTO PERSONALIZADO</span>
+        <h1>¡BIENVENIDO A <span class="orange">PROCOURT!</span></h1>
+      </div>
       <article class="caracteristicas">
         <h2 class="orange">¿QUÉ ES PROCOURT?</h2>
         <p>
-          En ProCourt sabemos que no todos los jugadores tienen acceso a un
-          entrenador personal, lo cual limita a muchos atletas a entrenar de
-          manera genérica sin poder mejorar en los aspectos que realmente
-          necesitan desarrollar según su perfil.
+          En ProCourt sabemos que no todos los jugadores de baloncesto tienen
+          acceso a un entrenador personal, lo cual limita a muchos atletas a
+          entrenar de manera genérica sin poder mejorar en los aspectos que
+          realmente necesitan desarrollar según su perfil.
         </p>
       </article>
       <article class="caracteristicas">
@@ -69,7 +72,7 @@
         <p class="legend">DATOS FÍSICOS</p>
         <hr />
         <fieldset id="datos-fisicos">
-          <label class="label-datos"
+          <label class="label-datos" id="nombre"
             ><span>NOMBRE</span>
             <input
               type="text"
@@ -79,38 +82,37 @@
               class="input-datos"
               required
           /></label>
-          <div class="juntar">
-            <label class="label-datos"
-              ><span>PESO (KG)</span>
-              <input
-                type="number"
-                placeholder="75"
-                id="peso_jugador"
-                name="peso_jugador"
-                min="30"
-                max="200"
-                class="input-datos"
-                required
-            /></label>
-            <label class="label-datos"
-              ><span>ESTATURA (CM)</span>
-              <input
-                type="number"
-                placeholder="185"
-                id="estatura_jugador"
-                name="estatura_jugador"
-                min="130"
-                max="250"
-                class="input-datos"
-                required
-            /></label>
-          </div>
+
+          <label class="label-datos"
+            ><span>PESO (KG)</span>
+            <input
+              type="number"
+              placeholder="75"
+              id="peso_jugador"
+              name="peso_jugador"
+              min="30"
+              max="200"
+              class="input-datos"
+              required
+          /></label>
+          <label class="label-datos"
+            ><span>ESTATURA (CM)</span>
+            <input
+              type="number"
+              placeholder="185"
+              id="estatura_jugador"
+              name="estatura_jugador"
+              min="130"
+              max="250"
+              class="input-datos"
+              required
+          /></label>
         </fieldset>
         <p class="legend">PERFIL DEPORTIVO</p>
         <hr />
         <fieldset id="perfil-deportivo">
           <legend class="label-datos">POSICIÓN EN LA CANCHA</legend>
-          <div class="posicion">
+          <div class="posiciones">
             <label class="posicion-input">
               <span class="iniciales">PG</span>
               <span class="nombre_posicion">Base</span>
@@ -257,7 +259,7 @@
             </label>
           </div>
         </fieldset>
-        <button class="submit-btn" type="submit">GENERAR RUTINA  ></button>
+        <button class="submit-btn" type="submit">GENERAR RUTINA ></button>
       </form>
     </main>
     <footer>
