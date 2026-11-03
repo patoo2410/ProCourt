@@ -32,11 +32,22 @@ header{
     width: 100vw;
     z-index: 100;
 }
+input::-webkit-outer-spin-button,input::-webkit-inner-spin-button{
+    -webkit-appearance:none;
+    margin:0;
+}
+    
+input[type=number]{
+    -moz-appearance:textfield;
+}
 #logo{
     height: 100%;
 }
 .orange{
     color: var(--naranja);
+}
+.white{
+    color: white;
 }
 .titulo{
     margin-top: 3rem;
@@ -148,6 +159,7 @@ hr{
     border-radius: var(--borde-redondeado);
     background: var(--fondo-inputs);
     border: 1px solid var(--color-bordes);
+    color: white;
 }
 .input-datos:focus{
     border: 1.5px solid var(--color-borde-naranja);
