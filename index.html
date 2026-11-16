@@ -5,269 +5,201 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="ProCourt genera rutinas personalizadas para jugadores de baloncesto según su posición, estilo de juego y características físicas."
+      content="ProCourt: rutinas personalizadas para jugadores de baloncesto y gestión de plantilla para entrenadores."
     />
-    <link rel="stylesheet" href="./css/styles.css" />
+    <meta name="theme-color" content="#0f0f0f" />
+    <title>ProCourt</title>
+
+    <!-- Agrega aquí tu favicon cuando lo tengas:
+    <link rel="icon" href="./assets/Logo/favicon.png" /> -->
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@400;500;700&family=Teko:wght@500;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@500;600;700&family=Montserrat:wght@700&display=swap"
       rel="stylesheet"
     />
-    <title>ProCourt</title>
+    <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
-    <header>
-      <a href="index.html"
-        ><img
-          src="./assets/Logo/ProCourtLogo.png"
-          alt="Logo oficial de ProCourt"
-          id="logo"
-      /></a>
-    </header>
-    <main>
-      <div class="hero">
-        <span class="orange titulo">ENTRENAMIENTO PERSONALIZADO</span>
-        <h1>¡BIENVENIDO A <span class="orange">PROCOURT!</span></h1>
+    <header class="sitio-header">
+      <div class="contenedor header-interno">
+        <a href="./" class="logo-enlace" aria-label="ProCourt, inicio">
+          <!-- Cuando puedas, agrega width y height reales del archivo para evitar saltos al cargar -->
+          <img
+            src="./assets/Logo/ProCourtLogo.png"
+            alt="Logo de ProCourt"
+            class="logo"
+          />
+        </a>
+        <nav class="header-acciones" aria-label="Cuenta">
+          <button type="button" class="btn btn-enlace">Iniciar sesión</button>
+          <button type="button" class="btn btn-primario">Crear cuenta</button>
+        </nav>
       </div>
-      <article class="caracteristicas">
-        <h2 class="orange">¿QUÉ ES PROCOURT?</h2>
-        <p>
-          ProCourt es una plataforma de desarrollo para <strong class="white">jugadores y entrenadores</strong>. Transforma el perfil físico, la posición y el estilo de juego de cada atleta en un plan individual, medible y pensado para entrenar en solitario.
-        </p>
-      </article>
-      <article class="caracteristicas">
-        <h2 class="orange">¿CÓMO TE AYUDAMOS?</h2>
-        <p>
-          <strong class="white">Como jugador</strong> podrás indicarnos tu posición, tu estilo de juego y tus
-          características físicas para recibir una rutina personalizada adaptada
-          a tus necesidades.
-          <br>
-          <br>
-          <strong class="white">Como entrenador</strong> brindamos un sistema de gestión de plantillas y jugadores para poder controlar las rutinas de cada uno de manera comoda.
-        </p>
-      </article>
-      <article class="caracteristicas">
-        <h2 class="orange">¿QUÉ INCLUYE TU ENTRENAMIENTO?</h2>
-        <ul class="lista-ventajas">
-          <li>Rutinas de cancha adaptadas a tu posición y estilo de juego.</li>
-          <li>Rutinas de gimnasio enfocadas en tu perfil físico.</li>
-          <li>
-            Ejercicios de pliometría para mejorar explosividad y salto vertical.
-          </li>
-          <li>
-            Estiramientos para ayudar a prevenir lesiones y mejorar la
-            movilidad.
-          </li>
-          <li>
-            Checklist diario y seguimiento semanal.
-          </li>
-          <li>
-            Gestión de jugadores, métricas y rutinas.
-          </li>
-        </ul>
-      </article>
-      <p class="frase-motivadora">
-        "Nuestra meta es que siempre seas
-        <span class="orange">mejor que ayer.</span>"
-      </p>
-      <form class="crear-perfil">
-        <h3>CREA TU <span class="orange">PERFIL DE JUGADOR</span></h3>
-        <p class="legend">DATOS FÍSICOS</p>
-        <hr />
-        <fieldset id="datos-fisicos">
-          <label class="label-datos" id="nombre"
-            ><span>NOMBRE</span>
-            <input
-              type="text"
-              placeholder="Ej. Anthony Edwards"
-              id="nombre_jugador"
-              name="nombre_jugador"
-              class="input-datos"
-              required
-          /></label>
+    </header>
 
-          <label class="label-datos"
-            ><span>PESO (KG)</span>
-            <input
-              type="number"
-              placeholder="75"
-              id="peso_jugador"
-              name="peso_jugador"
-              min="30"
-              max="200"
-              class="input-datos"
-              required
-          /></label>
-          <label class="label-datos"
-            ><span>ESTATURA (CM)</span>
-            <input
-              type="number"
-              placeholder="185"
-              id="estatura_jugador"
-              name="estatura_jugador"
-              min="130"
-              max="250"
-              class="input-datos"
-              required
-          /></label>
-        </fieldset>
-        <p class="legend">PERFIL DEPORTIVO</p>
-        <hr />
-        <fieldset id="perfil-deportivo">
-          <legend class="label-datos">POSICIÓN EN LA CANCHA</legend>
-          <div class="posiciones">
-            <label class="posicion-input">
-              <span class="iniciales">PG</span>
-              <span class="nombre_posicion">Base</span>
-              <input
-                type="radio"
-                name="posicion-cancha"
-                id="base"
-                value="base"
-                required
-              />
-            </label>
-            <label class="posicion-input">
-              <span class="iniciales">SG</span>
-              <span class="nombre_posicion">Escolta</span>
-              <input
-                type="radio"
-                name="posicion-cancha"
-                id="escolta"
-                value="escolta"
-              />
-            </label>
-            <label class="posicion-input">
-              <span class="iniciales">SF</span>
-              <span class="nombre_posicion">Alero</span>
-              <input
-                type="radio"
-                name="posicion-cancha"
-                id="alero"
-                value="alero"
-              />
-            </label>
-            <label class="posicion-input">
-              <span class="iniciales">PF</span>
-              <span class="nombre_posicion">Ala-Pívot</span>
-              <input
-                type="radio"
-                name="posicion-cancha"
-                id="ala-pivot"
-                value="ala-pivot"
-              />
-            </label>
-            <label class="posicion-input">
-              <span class="iniciales">C</span>
-              <span class="nombre_posicion">Pívot</span>
-              <input
-                type="radio"
-                name="posicion-cancha"
-                id="pivot"
-                value="pivot"
-              />
-            </label>
+    <main>
+      <section class="hero">
+        <img
+          src="./assets/Fondo/Fondo.jpg"
+          alt=""
+          aria-hidden="true"
+          class="hero-fondo"
+          fetchpriority="high"
+          decoding="async"
+        />
+        <div class="contenedor hero-contenido">
+          <p class="etiqueta">DESARROLLO INDIVIDUAL Y GESTIÓN DE EQUIPOS</p>
+          <h1 class="hero-titulo">
+            ENTRENA CON <br /><span class="acento">PROPÓSITO.</span>
+          </h1>
+          <p class="hero-texto">
+            Rutinas personalizadas para jugadores y una vista completa de
+            plantilla para entrenadores. Todo tu proceso, medido día a día.
+          </p>
+          <div class="hero-acciones">
+            <button type="button" class="btn btn-grande btn-cta">
+              CREAR CUENTA
+            </button>
+            <button type="button" class="btn btn-secundario btn-grande">
+              Ya tengo una cuenta
+            </button>
           </div>
+        </div>
+      </section>
 
-          <p class="label-datos">ESTILO DE JUEGO</p>
-          <div class="estilo-juego">
-            <label class="estilo-input">
-              <span class="estilo">Anotador</span>
-              <span class="descripcion_estilo">Máxima producción ofensiva</span>
-              <input
-                type="radio"
-                name="estilo-jugador"
-                id="anotador"
-                value="anotador"
-                required
+      <section class="plataforma" aria-labelledby="titulo-plataforma">
+        <p class="etiqueta">CONOCE LA PLATAFORMA</p>
+        <h2 class="plataforma-titulo" id="titulo-plataforma">
+          TODO LO QUE NECESITAS PARA MEJORAR
+        </h2>
+
+        <div class="tarjetas">
+          <article class="tarjeta">
+            <svg
+              class="tarjeta-icono"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 400 400"
+            >
+              <circle
+                cx="200"
+                cy="200"
+                r="140"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="22"
               />
-            </label>
-            <label class="estilo-input">
-              <span class="estilo">Defensor</span>
-              <span class="descripcion_estilo"
-                >Elite en defensa individual</span
-              >
-              <input
-                type="radio"
-                name="estilo-jugador"
-                id="defensor"
-                value="defensor"
+              <circle
+                cx="200"
+                cy="200"
+                r="90"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="22"
               />
-            </label>
-            <label class="estilo-input">
-              <span class="estilo">Playmaker</span>
-              <span class="descripcion_estilo">Visión y control del juego</span>
-              <input
-                type="radio"
-                name="estilo-jugador"
-                id="playmaker"
-                value="playmaker"
+              <circle
+                cx="200"
+                cy="200"
+                r="40"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="20"
               />
-            </label>
-            <label class="estilo-input">
-              <span class="estilo">Atlético</span>
-              <span class="descripcion_estilo">Velocidad y explosividad</span>
-              <input
-                type="radio"
-                name="estilo-jugador"
-                id="atletico"
-                value="atletico"
+              <circle cx="200" cy="200" r="12" fill="currentColor" />
+            </svg>
+            <p class="tarjeta-numero" aria-hidden="true">01</p>
+            <div class="tarjeta-contenido">
+              <p class="etiqueta">01 / PROCOURT</p>
+              <h3 class="tarjeta-titulo">¿QUÉ ES PROCOURT?</h3>
+              <p>
+                ProCourt es una plataforma de desarrollo para
+                <span class="resaltado">jugadores y entrenadores</span>.
+                Transforma el perfil físico, la posición y el estilo de juego de
+                cada atleta en un plan individual, medible y pensado para
+                entrenar en solitario.
+              </p>
+            </div>
+          </article>
+
+          <article class="tarjeta">
+            <svg
+              class="tarjeta-icono"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1"
+            >
+              <circle cx="12" cy="7" r="4" />
+              <path d="M4 21v-1a8 8 0 0 1 16 0v1" />
+            </svg>
+            <p class="tarjeta-numero" aria-hidden="true">02</p>
+            <div class="tarjeta-contenido">
+              <p class="etiqueta">02 / PROCOURT</p>
+              <h3 class="tarjeta-titulo">¿CÓMO TE AYUDAMOS?</h3>
+              <p>
+                <span class="resaltado">Como jugador,</span> recibes tu sesión
+                diaria, registras cada ejercicio y construyes un historial real
+                de progreso.
+              </p>
+              <p>
+                <span class="resaltado">Como entrenador,</span> administras tu
+                plantilla, sus perfiles y el avance de sus rutinas desde un solo
+                panel.
+              </p>
+            </div>
+          </article>
+
+          <article class="tarjeta">
+            <svg
+              class="tarjeta-icono"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 128 128"
+              fill="none"
+            >
+              <rect
+                x="29"
+                y="25"
+                width="70"
+                height="91"
+                rx="9"
+                stroke="currentColor"
+                stroke-width="5"
               />
-            </label>
-            <label class="estilo-input">
-              <span class="estilo">Versátil</span>
-              <span class="descripcion_estilo"
-                >Completo en todas las facetas</span
-              >
-              <input
-                type="radio"
-                name="estilo-jugador"
-                id="versatil"
-                value="versatil"
+              <path
+                d="M48 25v-5a7 7 0 0 1 7-7h18a7 7 0 0 1 7 7v5"
+                stroke="currentColor"
+                stroke-width="5"
               />
-            </label>
-            <label class="estilo-input">
-              <span class="estilo">Tirador</span>
-              <span class="descripcion_estilo"
-                >Especialista en tiro exterior</span
-              >
-              <input
-                type="radio"
-                name="estilo-jugador"
-                id="tirador"
-                value="tirador"
+              <path
+                d="M44 52h40M44 68h40M44 84h27"
+                stroke="currentColor"
+                stroke-width="4"
+                stroke-linecap="round"
               />
-            </label>
-            <label class="estilo-input">
-              <span class="estilo">Poste</span>
-              <span class="descripcion_estilo">Dominio del juego interior</span>
-              <input
-                type="radio"
-                name="estilo-jugador"
-                id="poste"
-                value="poste"
-              />
-            </label>
-            <label class="estilo-input">
-              <span class="estilo">Tres puntos y defensa</span>
-              <span class="descripcion_estilo"
-                >Espaciado y marcaje exterior</span
-              >
-              <input
-                type="radio"
-                name="estilo-jugador"
-                id="tripleydef"
-                value="tripleydef"
-              />
-            </label>
-          </div>
-        </fieldset>
-        <button class="submit-btn" type="submit">GENERAR RUTINA ></button>
-      </form>
+            </svg>
+            <p class="tarjeta-numero" aria-hidden="true">03</p>
+            <div class="tarjeta-contenido">
+              <p class="etiqueta">03 / PROCOURT</p>
+              <h3 class="tarjeta-titulo">¿QUÉ INCLUYE?</h3>
+              <ul class="tarjeta-lista">
+                <li>Sesiones individuales de 90-120 minutos.</li>
+                <li>Cancha, fuerza, pliometría y movilidad.</li>
+                <li>Checklist diario e historial de rutinas.</li>
+                <li>Gestión de jugadores, métricas y progreso.</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </section>
     </main>
-    <footer>
-      <span id="copy">Powered by &copy;ProCourt</span>
+
+    <footer class="pie">
+      <p class="pie-copy">© 2026 ProCourt</p>
     </footer>
   </body>
 </html>
