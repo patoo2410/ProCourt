@@ -12,7 +12,7 @@
     --color-vidrio: rgba(255, 255, 255, 0.05);
     --color-vidrio-hover: rgba(255, 255, 255, 0.1);
 
-    --fuente-titulos: 'Anton', sans-serif;
+    --fuente-titulos: 'Barlow Condensed', sans-serif;
     --fuente-textos: 'Inter', sans-serif;
     --fuente-extras: 'Montserrat', sans-serif;
 
@@ -88,7 +88,7 @@ h1,
 h2,
 h3 {
     font-family: var(--fuente-titulos);
-    font-weight: 400;
+    font-weight: 900;
     color: var(--color-blanco);
 }
 
@@ -176,7 +176,7 @@ h3 {
     color: var(--color-blanco);
     font-family: var(--fuente-titulos);
     font-size: 1.05rem;
-    font-weight: 400;
+    font-weight: 900;
     letter-spacing: 0.12em;
 }
 
@@ -280,7 +280,7 @@ h3 {
 
 .hero-titulo {
     font-size: var(--titulo-hero);
-    line-height: 0.98;
+    line-height: 0.85;
 }
 
 .hero-texto {
@@ -350,6 +350,7 @@ h3 {
     line-height: 1;
     opacity: 0.05;
     pointer-events: none;
+    font-weight: 900;
 }
 
 .tarjeta-contenido {
