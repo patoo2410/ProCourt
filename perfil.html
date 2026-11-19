@@ -1,0 +1,447 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Configura tu perfil para definir cómo usarás ProCourt y preparar tu experiencia."
+    />
+    <meta name="theme-color" content="#0f0f0f" />
+    <title>Configura tu perfil | ProCourt</title>
+
+    <link rel="icon" href="./assets/Logo/favicon.png" type="image/png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@900&family=Inter:wght@500;600;700&family=Montserrat:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/perfil.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header">
+        <img
+          src="./assets/Logo/ProCourtLogo.png"
+          alt="Logo ProCourt"
+          id="logo"
+        />
+        <div class="botones">
+          <div class="informacion-usuario">
+            <p class="nombre-usuario">Temporal</p>
+            <p class="correo-usuario">Temporal</p>
+          </div>
+          <button
+            type="button"
+            class="cerrar-sesion"
+            aria-label="Cerrar sesión"
+          >
+            <svg
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              height="24px"
+              width="24px"
+              fill="currentColor"
+            >
+              <path
+                d="M5,21q-0.83,0-1.41-0.59T3,19V5Q3,4.17 3.59,3.59T5,3h7V5H5V19h7v2H5Zm11-4l-1.38-1.45L17.18,13H9V11h8.18L14.63,8.45L16,7l5,5l-5,5Z"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <aside>
+      <div class="inicio">
+        <p class="texto-naranja introduccion">ÚLTIMO PASO</p>
+        <h1>CONFIGURA TU PERFIL</h1>
+        <p class="descripcion">
+          Define cómo usarás ProCourt para preparar tu experiencia.
+        </p>
+      </div>
+    </aside>
+
+    <main>
+      <form method="post" class="formulario" action="#">
+        <h2>CREA TU <span class="texto-naranja">PERFIL DE JUGADOR</span></h2>
+
+        <fieldset>
+          <legend class="titulo-area">Rol</legend>
+          <hr />
+          <div id="botones-rol">
+            <label for="rol-jugador" class="rol">
+              <input
+                type="radio"
+                name="rol"
+                id="rol-jugador"
+                value="jugador"
+                class="radio-rol"
+                checked
+              />
+              <svg
+                class="icono-rol"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 400 400"
+              >
+                <circle
+                  cx="200"
+                  cy="200"
+                  r="140"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="22"
+                />
+                <circle
+                  cx="200"
+                  cy="200"
+                  r="90"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="22"
+                />
+                <circle
+                  cx="200"
+                  cy="200"
+                  r="40"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="20"
+                />
+                <circle cx="200" cy="200" r="12" fill="currentColor" />
+              </svg>
+              <span class="info-boton">
+                <span class="texto titulo-rol">Jugador</span>
+                <span class="texto info-rol">Crea y completa tu rutina.</span>
+              </span>
+            </label>
+
+            <label for="rol-entrenador" class="rol">
+              <input
+                type="radio"
+                name="rol"
+                id="rol-entrenador"
+                value="entrenador"
+                class="radio-rol"
+              />
+              <svg
+                aria-hidden="true"
+                class="icono-rol"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M1,20V17.2q0-0.85 0.44-1.56q0.44-0.71 1.16-1.09q1.55-0.78 3.15-1.16T9,13t3.25,0.39t3.15,1.16q0.72,0.38 1.16,1.09T17,17.2V20H1Zm18,0V17q0-1.1-0.61-2.11q-0.61-1.01-1.74-1.74q1.27,0.15 2.4,0.51q1.13,0.36 2.1,0.89q0.9,0.5 1.38,1.11T23,17v3H19ZM6.18,10.83Q5,9.65 5,8T6.18,5.18T9,4t2.83,1.18T13,8t-1.17,2.82T9,12T6.18,10.83Zm11.65,0Q16.65,12 15,12q-0.27,0-0.7-0.06T13.6,11.8q0.67-0.8 1.04-1.78T15,8T14.64,5.97T13.6,4.2q0.35-0.13 0.7-0.16T15,4q1.65,0 2.82,1.18T19,8t-1.18,2.82ZM3,18H15V17.2q0-0.27-0.14-0.5q-0.14-0.22-0.36-0.35q-1.35-0.68-2.72-1.01T9,15T6.23,15.34T3.5,16.35Q3.28,16.48 3.14,16.7Q3,16.93 3,17.2V18Zm7.41-8.59Q11,8.82 11,8T10.41,6.59T9,6Q8.18,6 7.59,6.59Q7,7.18 7,8T7.59,9.41T9,10q0.83,0 1.41-0.59ZM9,18ZM9,8Z"
+                />
+              </svg>
+              <span class="info-boton">
+                <span class="texto titulo-rol">Entrenador</span>
+                <span class="texto info-rol"
+                  >Gestiona plantilla y rutinas.</span
+                >
+              </span>
+            </label>
+          </div>
+        </fieldset>
+
+        <fieldset id="datos-personales-perfil">
+          <legend class="titulo-area">Datos personales</legend>
+          <hr />
+          <label for="nombre-perfil" class="datos-label">NOMBRE</label>
+          <input
+            type="text"
+            name="nombre-perfil"
+            id="nombre-perfil"
+            placeholder="Ej. Anthony Edwards"
+            autocomplete="name"
+          />
+          <div class="equipo">
+            <label for="nombre-equipo" class="datos-label"
+              >NOMBRE DEL EQUIPO</label
+            >
+            <input
+              type="text"
+              name="nombre-equipo"
+              id="nombre-equipo"
+              placeholder="Ej. Gladiadores"
+            />
+            <div class="informacion-entrenador" hidden>
+              <p class="titulo">Tu centro de control de equipo</p>
+              <p class="texto">
+                Podrás registrar jugadores con su peso, estatura, posición y
+                estilo; consultar sus rutinas individuales y seguir el progreso
+                de cada sesión.
+              </p>
+            </div>
+          </div>
+          <div class="peso-estatura">
+            <div class="peso">
+              <label for="peso-perfil" class="datos-label">PESO (KG)</label>
+              <input
+                type="number"
+                name="peso-perfil"
+                id="peso-perfil"
+                placeholder="30-150"
+                min="30"
+                max="150"
+                inputmode="numeric"
+              />
+            </div>
+
+            <div class="estatura">
+              <label for="estatura-perfil" class="datos-label"
+                >ESTATURA (CM)</label
+              >
+              <input
+                type="number"
+                name="estatura-perfil"
+                id="estatura-perfil"
+                placeholder="140-230"
+                min="140"
+                max="230"
+                inputmode="numeric"
+              />
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend class="titulo-area">PERFIL DEPORTIVO</legend>
+          <hr />
+          <fieldset>
+            <legend class="datos-label">POSICIÓN EN LA CANCHA</legend>
+            <div class="posiciones">
+              <label for="base" class="posicion">
+                <input type="radio" name="posicion" id="base" value="base" />
+                <span class="iniciales">PG</span>
+                <span class="nombre-posicion">Base</span>
+              </label>
+              <label for="escolta" class="posicion">
+                <input
+                  type="radio"
+                  name="posicion"
+                  id="escolta"
+                  value="escolta"
+                />
+                <span class="iniciales">SG</span>
+                <span class="nombre-posicion">Escolta</span>
+              </label>
+              <label for="alero" class="posicion">
+                <input type="radio" name="posicion" id="alero" value="alero" />
+                <span class="iniciales">SF</span>
+                <span class="nombre-posicion">Alero</span>
+              </label>
+              <label for="ala-pivot" class="posicion">
+                <input
+                  type="radio"
+                  name="posicion"
+                  id="ala-pivot"
+                  value="ala-pivot"
+                />
+                <span class="iniciales">PF</span>
+                <span class="nombre-posicion">Ala-Pívot</span>
+              </label>
+              <label for="pivot" class="posicion">
+                <input type="radio" name="posicion" id="pivot" value="pivot" />
+                <span class="iniciales">C</span>
+                <span class="nombre-posicion">Pívot</span>
+              </label>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend class="datos-label">ESTILO DE JUEGO</legend>
+            <div class="estilos-juego">
+              <label for="anotador" class="tarjeta">
+                <span class="informacion-estilo">
+                  <span class="titulo-estilo">Anotador</span>
+                  <span class="descripcion-estilo" id="descripcion-anotador">
+                    Máxima producción ofensiva
+                  </span>
+                </span>
+                <input
+                  type="radio"
+                  name="estilo-juego"
+                  id="anotador"
+                  value="anotador"
+                  aria-describedby="descripcion-anotador"
+                />
+                <div class="indicador">
+                  <div class="indicador-blanco"></div>
+                </div>
+              </label>
+
+              <label for="defensor" class="tarjeta">
+                <span class="informacion-estilo">
+                  <span class="titulo-estilo">Defensor</span>
+                  <span class="descripcion-estilo" id="descripcion-defensor">
+                    Élite en defensa individual
+                  </span>
+                </span>
+                <input
+                  type="radio"
+                  name="estilo-juego"
+                  id="defensor"
+                  value="defensor"
+                  aria-describedby="descripcion-defensor"
+                />
+                <div class="indicador">
+                  <div class="indicador-blanco"></div>
+                </div>
+              </label>
+
+              <label for="playmaker" class="tarjeta">
+                <span class="informacion-estilo">
+                  <span class="titulo-estilo">Playmaker</span>
+                  <span class="descripcion-estilo" id="descripcion-playmaker">
+                    Visión y control del juego
+                  </span>
+                </span>
+                <input
+                  type="radio"
+                  name="estilo-juego"
+                  id="playmaker"
+                  value="playmaker"
+                  aria-describedby="descripcion-playmaker"
+                />
+                <div class="indicador">
+                  <div class="indicador-blanco"></div>
+                </div>
+              </label>
+
+              <label for="atletico" class="tarjeta">
+                <span class="informacion-estilo">
+                  <span class="titulo-estilo">Atlético</span>
+                  <span class="descripcion-estilo" id="descripcion-atletico">
+                    Velocidad y explosividad
+                  </span>
+                </span>
+                <input
+                  type="radio"
+                  name="estilo-juego"
+                  id="atletico"
+                  value="atletico"
+                  aria-describedby="descripcion-atletico"
+                />
+                <div class="indicador">
+                  <div class="indicador-blanco"></div>
+                </div>
+              </label>
+
+              <label for="versatil" class="tarjeta">
+                <span class="informacion-estilo">
+                  <span class="titulo-estilo">Versátil</span>
+                  <span class="descripcion-estilo" id="descripcion-versatil">
+                    Completo en todas las facetas
+                  </span>
+                </span>
+                <input
+                  type="radio"
+                  name="estilo-juego"
+                  id="versatil"
+                  value="versatil"
+                  aria-describedby="descripcion-versatil"
+                />
+                <div class="indicador">
+                  <div class="indicador-blanco"></div>
+                </div>
+              </label>
+
+              <label for="tirador" class="tarjeta">
+                <span class="informacion-estilo">
+                  <span class="titulo-estilo">Tirador</span>
+                  <span class="descripcion-estilo" id="descripcion-tirador">
+                    Especialista en tiro
+                  </span>
+                </span>
+                <input
+                  type="radio"
+                  name="estilo-juego"
+                  id="tirador"
+                  value="tirador"
+                  aria-describedby="descripcion-tirador"
+                />
+                <div class="indicador">
+                  <div class="indicador-blanco"></div>
+                </div>
+              </label>
+
+              <label for="poste" class="tarjeta">
+                <span class="informacion-estilo">
+                  <span class="titulo-estilo">Poste</span>
+                  <span class="descripcion-estilo" id="descripcion-poste">
+                    Dominio del juego interior
+                  </span>
+                </span>
+                <input
+                  type="radio"
+                  name="estilo-juego"
+                  id="poste"
+                  value="poste"
+                  aria-describedby="descripcion-poste"
+                />
+                <div class="indicador">
+                  <div class="indicador-blanco"></div>
+                </div>
+              </label>
+
+              <label for="triple-defensa" class="tarjeta">
+                <span class="informacion-estilo">
+                  <span class="titulo-estilo">Tres puntos y defensa</span>
+                  <span
+                    class="descripcion-estilo"
+                    id="descripcion-triple-defensa"
+                  >
+                    Élite en anotación y defensa en el perímetro
+                  </span>
+                </span>
+                <input
+                  type="radio"
+                  name="estilo-juego"
+                  id="triple-defensa"
+                  value="triple-defensa"
+                  aria-describedby="descripcion-triple-defensa"
+                />
+                <div class="indicador">
+                  <div class="indicador-blanco"></div>
+                </div>
+              </label>
+            </div>
+          </fieldset>
+
+          <fieldset id="nivel-juego">
+            <legend class="datos-label" id="label-nivel">NIVEL DE JUEGO</legend>
+            <input
+              type="range"
+              name="nivel"
+              id="nivel"
+              min="1"
+              max="3"
+              step="1"
+              value="2"
+              aria-describedby="label-nivel"
+            />
+            <div class="nivel-juego-info" aria-live="polite">
+              <p class="titulo-nivel" id="nivel-titulo">Intermedio</p>
+              <p class="texto" id="nivel-descripcion">
+                Eres un jugador dedicado que participa en varios equipos y
+                torneos hasta estatales.
+              </p>
+            </div>
+          </fieldset>
+        </fieldset>
+
+        <button type="submit" class="boton-generar"><span class="texto-boton">GENERAR RUTINA &gt;</span></button>
+      </form>
+    </main>
+
+    <footer class="pie">
+      <p class="pie-copy">© 2026 ProCourt</p>
+    </footer>
+  </body>
+</html>

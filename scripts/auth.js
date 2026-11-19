@@ -19,6 +19,7 @@ const requisitosContenedor = document.getElementById("requisitos");
 const requisitos = document.querySelectorAll(".requisito");
 
 const PAGINA_DESTINO = "rutina.html";
+const PAGINA_DESTINO_REGISTER = "perfil.html"
 
 const TEXTOS = {
   "iniciar-sesion": {
@@ -187,7 +188,7 @@ formulario.addEventListener("submit", async (e) => {
         password: pass,
         options: {
           data: { nombre: nombreInput.value.trim() },
-          emailRedirectTo: new URL("auth.html", location.href).href,
+          emailRedirectTo: new URL("perfil.html", location.href).href,
         },
       });
       if (error) return mostrarMensaje(traducirError(error));
@@ -197,13 +198,15 @@ formulario.addEventListener("submit", async (e) => {
       }
 
       if (data.session) {
-        location.href = PAGINA_DESTINO;
+        redirigiendo = true;
+        location.href = PAGINA_DESTINO_REGISTER;
       } else {
         mostrarMensaje("Cuenta creada. Revisa tu correo para confirmarla y luego inicia sesión.", "ok");
       }
     } else {
       const { error } = await db.auth.signInWithPassword({ email: correo, password: pass });
       if (error) return mostrarMensaje(traducirError(error));
+      redirigiendo = true;
       location.href = PAGINA_DESTINO;
     }
   } catch (err) {
@@ -244,6 +247,8 @@ setModo(
   sessionStorage.getItem("seleccionado") === "Iniciar sesion" ? "iniciar-sesion" : "registro",
 );
 
+let redirigiendo = false;
+
 db.auth.getSession().then(({ data }) => {
-  if (data.session) location.href = PAGINA_DESTINO;
+  if (data.session && !redirigiendo) location.href = PAGINA_DESTINO;
 });
